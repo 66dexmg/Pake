@@ -477,24 +477,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Check if URL belongs to the same domain (including subdomains)
   const isSameDomain = (url) => {
-    try {
-      const linkUrl = new URL(url);
-      const currentUrl = new URL(window.location.href);
+    // try {
+    //   const linkUrl = new URL(url);
+    //   const currentUrl = new URL(window.location.href);
 
-      if (linkUrl.hostname === currentUrl.hostname) return true;
+    //   if (linkUrl.hostname === currentUrl.hostname) return true;
 
-      // Extract root domain (e.g., bilibili.com from www.bilibili.com)
-      const getRootDomain = (hostname) => {
-        const parts = hostname.split(".");
-        return parts.length >= 2 ? parts.slice(-2).join(".") : hostname;
-      };
+    //   // Extract root domain (e.g., bilibili.com from www.bilibili.com)
+    //   const getRootDomain = (hostname) => {
+    //     const parts = hostname.split(".");
+    //     return parts.length >= 2 ? parts.slice(-2).join(".") : hostname;
+    //   };
 
-      return (
-        getRootDomain(currentUrl.hostname) === getRootDomain(linkUrl.hostname)
-      );
-    } catch (e) {
-      return false;
-    }
+    //   return (
+    //     getRootDomain(currentUrl.hostname) === getRootDomain(linkUrl.hostname)
+    //   );
+    // } catch (e) {
+    //   return false;
+    // }
+    return true
   };
 
   // Check if URL should be treated as internal based on regex pattern or domain
