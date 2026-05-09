@@ -495,7 +495,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // } catch (e) {
     //   return false;
     // }
-    return true
+    return true;
   };
 
   // Check if URL should be treated as internal based on regex pattern or domain

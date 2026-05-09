@@ -82,8 +82,8 @@ runs:
         ARGS+=("--new-window")
         ARGS+=("--internal-url-regex" "^https://.*\.zhihuiya\.com")
         ARGS+=("--installer-language zh-CN")
-        
-        
+
+
 
         if [ "${{ inputs.debug }}" == "true" ]; then
           ARGS+=("--debug")
