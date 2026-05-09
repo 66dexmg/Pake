@@ -78,8 +78,12 @@ runs:
           ARGS+=("--icon" "${{ inputs.icon }}")
         fi
 
-        ARGS+=("--width" "${{ inputs.width }}")
-        ARGS+=("--height" "${{ inputs.height }}")
+        ARGS+=("--proxy-url" "http://192.168.53.40:808")
+        ARGS+=("--new-window")
+        ARGS+=("--internal-url-regex" "^https://.*\.zhihuiya\.com")
+        ARGS+=("--installer-language zh-CN")
+        
+        
 
         if [ "${{ inputs.debug }}" == "true" ]; then
           ARGS+=("--debug")
